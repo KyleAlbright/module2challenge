@@ -12,7 +12,9 @@ body{
 
 header {
     background: #098191;
-}
+  } 
+
+
 header::after {
     content: '';
     display: table;
@@ -24,6 +26,8 @@ h1 {
     margin-left: 70px;
     margin-top: 25px;
     font-family: monospace;
+    flex-wrap: wrap;
+    align-items: center;
     
     
 }
@@ -44,6 +48,7 @@ nav li {
     margin-right: 70px;
     padding-top: 40px;
     position: relative;
+    flex-wrap: wrap;
 }
 
 nav a {
@@ -74,9 +79,9 @@ nav a:hover::before {
     width: 100%
 }
 
-body, html {
+ body, html {
     height: 100%;
-   
+    
 }
 
 .hero-image {
@@ -109,7 +114,7 @@ body, html {
   margin-bottom: 80px;
 }
 
-h2 + p {
+#portfolio  {
     padding-bottom: 40px;
     font-size: 150%;
     font-family: Arial, Helvetica, sans-serif;
@@ -149,10 +154,8 @@ button {
 
     .background-image {
     background-image: url("https://images.pexels.com/photos/716398/pexels-photo-716398.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-    /* background-size: cover; */
     background-repeat: no-repeat;
     background-position: center;
-     /* width: 200px;  */
     height: 500px;
   } 
 
@@ -166,51 +169,56 @@ button {
     
   }
 
-  #aboutme h3 {
+   h3 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 20px ;
     font-family: monospace;
     font-size: 200%;
     color: white;
   }
 
   
-  #aboutme .abouttext img {
-    width:300px;
+   .abouttext img {
+    max-width:300px;
     padding: 5px 50px 0 50px;
     margin: 0 auto;
     float:left;
-	shape-outside: content-box polygon( 0 0, 61.6% 0.4%, 83% 3.5%, 80.9% 12.9%, 74.8% 29.2%, 74.7% 35.4%, 83.9% 43.7%, 96.6% 59.6%, 96.9% 75.2%, 97.7% 90.2%, 97.3% 99.3%, 0.5% 68.1% );
-	shape-margin: 20px;
-    /* margin-top: 20px; */
+	  shape-outside: content-box polygon( 0 0, 61.6% 0.4%, 83% 3.5%, 80.9% 12.9%, 74.8% 29.2%, 74.7% 35.4%, 83.9% 43.7%, 96.6% 59.6%, 96.9% 75.2%, 97.7% 90.2%, 97.3% 99.3%, 0.5% 68.1% );
+	  shape-margin: 20px;
+  
 }
    
 
-  #aboutme .abouttext > p {
+   #abouttext   {
     color:white;
-    text-align: right;
+    /* text-align: center; */
     display: inline;
     line-height: 2.5;
+    min-height: 250px; 
+    flex-wrap: wrap;
+   justify-content: space-evenly;
    
-  }
+   
+  } 
 
   .maincontainer {
     display:flex;
     flex-wrap:wrap;
     justify-content: center;
     padding: 10px;
+    margin-top: 10vh;
+    
   }
 
-  .maincard {
-    background: #098191;
+  #projects {
     width: 1220px;
     height: 200px;
-    margin:20px;
-    border-radius: 15px 15px;}
+  }
+    
 
-  .card-image1 {
+  #card-image1 {
     background-image:url("https://www.pandasecurity.com/en/mediacenter/src/uploads/2019/01/hero-21-1920x1080.jpg");
-     filter: blur(3px);
+    
      transition: 0.5s; 
      background-position: center;
      background-size: 100%, 100%;
@@ -232,6 +240,8 @@ button {
     flex-wrap: wrap;
     justify-content: center;
     padding:25px;
+    max-width: 1500px;
+    margin: 0 auto
   }
 
   .card {
@@ -241,96 +251,46 @@ button {
     margin:20px;
     border-radius: 15px 15px;
 }
-  .card-image2 {
+  .card-image {
+    filter: blur(3px);
+    transition: 0.5s;
+    background-position: center;
+    background-size: 100%, 100%;
+    height: 125px;
+    margin-bottom: 15px;
+    border-radius: 15px 15px 0 0;
+  }
+  #card-image2 {
     background-image:url("https://www.itprotoday.com/sites/itprotoday.com/files/styles/article_featured_standard/public/JavaScript-code.jpg?itok=yB8Igyye");
-    filter: blur(3px);
-    transition: 0.5s;
-    background-position: center;
-    background-size: 100%, 100%;
-    height: 125px;
-    margin-bottom: 15px;
-    border-radius: 15px 15px 0 0;
-  }
-
-  .card-image3 {
-    background-image:url("https://images.tmcnet.com/tmc/misc/articles/image/2022-feb/1278619887-AdobeStock_322315214_cloud_API_SUPERSIZE.jpg");
-    filter: blur(3px);
-    transition: 0.5s;
-    background-position: center;
-    background-size: 100%, 100%;
-    height: 125px;
-    margin-bottom: 15px;
-    border-radius: 15px 15px 0 0;
-  }
-
-  .card-image4 {
-    background-image:url("https://www.cuinsight.com/wp-content/uploads/2021/04/bigstock-Future-Technology-Innovation-403377170.jpg");
-    filter: blur(3px);
-    transition: 0.5s;
-    background-position: center;
-    background-size: 100%, 100%;
-    height: 125px;
-    margin-bottom: 15px;
-    border-radius: 15px 15px 0 0;
-  }
-
-  .card-image5 {
-    background-image:url("https://cdn.pixabay.com/photo/2019/11/14/13/01/abstract-4626114_960_720.jpg");
-    filter: blur(3px);
-    transition: 0.5s;
-    background-position: center;
-    background-size: 100%, 100%;
-    height: 125px;
-    margin-bottom: 15px;
-    
-  }
-
-  .card-image2 img {
-  
-    height: 125px;
-    width: 125px;
-    border-radius: 50%;
-  }
-  
-   .card-image3 img {
-    height: 125px;
-    width: 125px;
-    border-radius: 50%;
-  } 
-
-   .card-image4 img {
-    height: 125px;
-    width: 125px;
-    border-radius: 50%;
-  } 
-
-  .card-image5 img {
-    height: 125px;
-    width: 125px;
-    border-radius: 50%;
-  } 
-  .card-image1:hover {
-    filter: blur(0px);
-    
-  }
-  .card-image2:hover {
-    filter: blur(0px);
-    
-  }
-  .card-image3:hover {
-    filter: blur(0px);
-  
-  }
-  .card-image4:hover {
-    filter: blur(0px);
-    
-  }
-  .card-image5:hover {
-    filter: blur(0px);
-   
 }
+  #card-image3 {
+    background-image:url("https://images.tmcnet.com/tmc/misc/articles/image/2022-feb/1278619887-AdobeStock_322315214_cloud_API_SUPERSIZE.jpg");
+    
+  }
 
-.card-button {
+  #card-image4 {
+    background-image:url("https://www.cuinsight.com/wp-content/uploads/2021/04/bigstock-Future-Technology-Innovation-403377170.jpg");
+    
+  }
+
+  #card-image5 {
+    background-image:url("https://cdn.pixabay.com/photo/2019/11/14/13/01/abstract-4626114_960_720.jpg");
+    
+  }
+
+  .card-image img {
+  
+    height: 125px;
+    width: 125px;
+    border-radius: 50%;
+  }
+  
+   
+  .card-image:hover {
+    filter: blur(0px);
+    
+  }
+  .card-button {
     float: right;
     margin-right: 25px;
     
@@ -408,4 +368,20 @@ address a::before {
 
 address a:hover::before {
   width: 100%
+}
+
+ @media screen and (max-width: 1024px){
+  
+.abouttext {font-size: 11px; }
+} 
+
+
+@media screen and (max-width: 768px){
+#targetimage {display:none}
+.abouttext {line-height:1; font-size: 10px;  }
+}
+
+@media screen and (max-width: 480px){ 
+nav li { margin-right: 20px;}
+.hero-image {display:none}
 }
