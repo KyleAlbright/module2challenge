@@ -1,387 +1,387 @@
-body{
-    margin: 0;
-    background: #251e21;
-    font-family:Arial, Helvetica, sans-serif;
-    font-weight: 300;
+/* general styling of font, and background color (background color was styled to hide the background image on line 149 */
+body {
+  margin: 10px;
+  background: #251e21;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 300;
+
+}
+body,
+html {
+  height: 100%;
+
 }
 
-.heading {
-    width: 80%;
-    margin:0 auto;
-}
-
+/* This is the container for the nav bar */
 header {
-    background: #098191;
-  } 
-
-
-header::after {
-    content: '';
-    display: table;
-    clear:both;
+  background: #098191;
+  width: 100%;
+  margin: 0 auto;
+  content: '';
+  display: table;
+  clear: both;
 }
+
+
+/* this styles "Kyle Albright", and gives it relationship within the nav section */
 h1 {
-    float: left;
-    padding: 10px 0;
-    margin-left: 70px;
-    margin-top: 25px;
-    font-family: monospace;
-    flex-wrap: wrap;
-    align-items: center;
-    
-    
+  float: left;
+  padding: 10px 0;
+  margin-left: 70px;
+  margin-top: 45px;
+  font-family: monospace;
+  flex-wrap: wrap;
+  align-items: center;
+
+
 }
+/* This pushes the navigation links to the right of the page, and keeps them organized as screen becomes smaller */
 .navlinks {
-    float: right;
-    padding-bottom: 35px;
-}
+  float: right;
+  list-style: none; 
+  flex-wrap: wrap; 
 
-nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
 }
-
+/* This orders the links inline-block, and spaces them out evenly while staying inline with the h1 tag  */
 nav li {
-    display: inline-block;
-    margin-left: 70px;
-    margin-right: 70px;
-    padding-top: 40px;
-    position: relative;
-    flex-wrap: wrap;
+  display: inline-block;
+  margin-left: 70px;
+  margin-right: 70px;
+  padding-top: 40px;
+  padding-bottom: 35px; 
+  position: relative;
+  
 }
-
+/* Styling for the nav links when not hover */
 nav a {
-    color: #444;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 14px;
+  color: #444;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
 }
-
+/* styling of the individual nav items, when hovered over */
 nav a:hover {
-    color: #000;
-    font-weight: bold;
+  color: #000;
+  font-weight: bold;
 }
-
+/* sets a bar above the nav links, should not be seen until hovered over because the top and width are set to 0 */
 nav a::before {
-    content: '';
-    display:block;
-    height: 5px;
-    width: 100px;
-    background-color: #444;
-    position:absolute;
-    top: 0;
-    width: 0;
-    transition: all ease-in-out 300ms;
+  content: '';
+  display: block;
+  height: 5px;
+  width: 100px;
+  background-color: #444;
+  position: absolute;
+  top: 0;
+  width: 0;
+  
 }
-
+/* This controlls the speed and how far the hover effect spans across the links */
 nav a:hover::before {
-    width: 100%
+  width: 100%;
+  transition: all ease-in-out 300ms;
 }
 
- body, html {
-    height: 100%;
-    
-}
 
+/* This is the Hero image, it should not be viewable on smallest screen sizes */
 .hero-image {
-    background-image:linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("./heroimage.jpg");
-    height:70%;
-    background-position: center;
-    background-repeat: no-repeat center top;
-    background-size: 100% 100%;
-    position: relative;
-    
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("./heroimage.jpg");
+  height: 70%;
+  background-position: center;
+  background-repeat: no-repeat center top;
+  background-size: 100% 100%;
+  position: relative;
+
 }
-    .hero-text {
-        text-align: center;
-        position: absolute;
-        top:50%;
-        left:50%;
-        transform: translate(-50%, -50%);
-        color:white
-    }
-    
- .myname {
+/* Sets the rules for the text on top of the hero image, while keeping them centered on all screen sizes that view image */
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #eee
+}
+/* "My Name is Kyle" styling */
+.myname {
   font-family: monospace;
   font-style: normal;
   font-weight: bold;
-  color: #eee;
   font-size: 11vmin;
   letter-spacing: 0.03em;
-  line-height: 1;
   text-shadow: 2px 4px 8px rgba(0, 0, 0, 1);
   margin-bottom: 80px;
 }
+/* "and this is my portfolio" styling */
+#portfolio {
+  padding-bottom: 40px;
+  font-size: 150%;
+  text-transform: uppercase;
 
-#portfolio  {
-    padding-bottom: 40px;
-    font-size: 150%;
-    font-family: Arial, Helvetica, sans-serif;
-    text-transform: uppercase;
 }
-
+/* sets the styling of the button */
 button {
-    color: #ffffff;
-    background: #098191;
-    transition: background ease .5s;
-    border-radius: 50px;
-    display: inline-block;
-    border: none;
-    padding: 0.75rem 1.5rem;
-    margin: 0;
-    font-size: 1.2rem;
-    text-align: center;
-    
-  }
+  color: #ffffff;
+  background: #098191;
+  border-radius: 50px;
+  display: inline-block;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  margin: 0;
+  font-size: 1.2rem;
+  text-align: center;
 
-  button a {
-    text-decoration: none;
-    color: #ffffff;
-    
-  }
-
-  button:hover {
-    background: #222;
-    cursor: grab;
-    color:#fff
-    
-  }
-  button:focus {
-    outline: 1px solid #fff;
-    outline-offset: -4px;
-  }
-
-    .background-image {
-    background-image: url("https://images.pexels.com/photos/716398/pexels-photo-716398.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 500px;
-  } 
-
- 
-
-   #aboutme {
-    display: flex;
-    padding: 20px 0;
-    min-height: 50vh;
-    text-align: left; 
-    
-  }
-
-   h3 {
-    text-align: center;
-    margin-bottom: 20px ;
-    font-family: monospace;
-    font-size: 200%;
-    color: white;
-  }
-
-  
-   .abouttext img {
-    max-width:300px;
-    padding: 5px 50px 0 50px;
-    margin: 0 auto;
-    float:left;
-	  shape-outside: content-box polygon( 0 0, 61.6% 0.4%, 83% 3.5%, 80.9% 12.9%, 74.8% 29.2%, 74.7% 35.4%, 83.9% 43.7%, 96.6% 59.6%, 96.9% 75.2%, 97.7% 90.2%, 97.3% 99.3%, 0.5% 68.1% );
-	  shape-margin: 20px;
-  
 }
-   
+/* sets the styling of the words inside the button when links are attached to them. This was done to take away the default styling */
+button a {
+  text-decoration: none;
+  color: #ffffff;
 
-   #abouttext   {
-    color:white;
-    /* text-align: center; */
-    display: inline;
-    line-height: 2.5;
-    min-height: 250px; 
-    flex-wrap: wrap;
-   justify-content: space-evenly;
-   
-   
-  } 
-
-  .maincontainer {
-    display:flex;
-    flex-wrap:wrap;
-    justify-content: center;
-    padding: 10px;
-    margin-top: 10vh;
-    
-  }
-
-  #projects {
-    width: 1220px;
-    height: 200px;
-  }
-    
-
-  #card-image1 {
-    background-image:url("https://www.pandasecurity.com/en/mediacenter/src/uploads/2019/01/hero-21-1920x1080.jpg");
-    
-     transition: 0.5s; 
-     background-position: center;
-     background-size: 100%, 100%;
-     height: 125px;
-     margin-bottom: 15px;
-     border-radius: 15px 15px 0 0;
-      }
-
-    .card-image1 img {
-  
-        height: 130px;
-        width: 130px;
-        border-radius: 50%;
-        
-    }
-
-  .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding:25px;
-    max-width: 1500px;
-    margin: 0 auto
-  }
-
-  .card {
-    background: #098191;
-    width: 600px;
-    height: 200px;
-    margin:20px;
-    border-radius: 15px 15px;
 }
-  .card-image {
-    filter: blur(3px);
-    transition: 0.5s;
-    background-position: center;
-    background-size: 100%, 100%;
-    height: 125px;
-    margin-bottom: 15px;
-    border-radius: 15px 15px 0 0;
-  }
-  #card-image2 {
-    background-image:url("https://www.itprotoday.com/sites/itprotoday.com/files/styles/article_featured_standard/public/JavaScript-code.jpg?itok=yB8Igyye");
+/* sets the styling of how the button and cursor reacts when hovered over */
+button:hover {
+  background: #222;
+  cursor: grab;
+  color: #fff;
+  transition: ease .5s;
 }
-  #card-image3 {
-    background-image:url("https://images.tmcnet.com/tmc/misc/articles/image/2022-feb/1278619887-AdobeStock_322315214_cloud_API_SUPERSIZE.jpg");
-    
-  }
-
-  #card-image4 {
-    background-image:url("https://www.cuinsight.com/wp-content/uploads/2021/04/bigstock-Future-Technology-Innovation-403377170.jpg");
-    
-  }
-
-  #card-image5 {
-    background-image:url("https://cdn.pixabay.com/photo/2019/11/14/13/01/abstract-4626114_960_720.jpg");
-    
-  }
-
-  .card-image img {
-  
-    height: 125px;
-    width: 125px;
-    border-radius: 50%;
-  }
-  
-   
-  .card-image:hover {
-    filter: blur(0px);
-    
-  }
-  .card-button {
-    float: right;
-    margin-right: 25px;
-    
-}
-.card h2 {
-    margin-left: 25px;
-    font-family: monospace;
-    color: #fff;
-    padding-top: 10px;
+/* This is the background image behind the "About me section" */
+.background-image {
+  background-image: url("https://images.pexels.com/photos/716398/pexels-photo-716398.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 500px;
 }
 
-.maincard h2 {
-    margin-left: 25px;
-    font-family: monospace;
-    color: #fff;
-    padding-top: 10px;
-}
-
-.contact {
-  width: 80%;
-  margin:0 auto;
-  float:center;
+/* styling of title of about me section. */
+h3 {
+  text-align: center;
+  margin-bottom: 20px;
   font-family: monospace;
+  font-size: 200%;
+  color: white;
 }
 
+/* cutout image, shape-outside was done to wrap the text around the image */
+.abouttext img {
+  max-width: 300px;
+  padding: 5px 50px 0 50px;
+  margin: 0 auto;
+  float: left;
+  shape-outside: content-box polygon(0 0, 61.6% 0.4%, 83% 3.5%, 80.9% 12.9%, 74.8% 29.2%, 74.7% 35.4%, 83.9% 43.7%, 96.6% 59.6%, 96.9% 75.2%, 97.7% 90.2%, 97.3% 99.3%, 0.5% 68.1%);
+  shape-margin: 20px;
+
+}
+
+/* styling of the about me section */
+#abouttext {
+  color: white;
+  display: inline;
+  line-height: 2.5;
+  min-height: 250px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+
+}
+/* styling of all the h4 elements. h4 elements are the titles of each card */
+h4 {
+  margin: 27px 0 20px 20px;
+  font-family: monospace;
+  font-size: 150%;
+  color: white;
+
+}
+
+/* this sets the flex properties of the larger main card */
+.maincontainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px;
+  margin-top: 10vh;
+
+}
+/* sets the height and width of the main card */
+#projects {
+  width: 1220px;
+  height: 200px;
+}
+
+/* styling for the background image of the main card */
+#card-image1 {
+  background-image: url("https://www.pandasecurity.com/en/mediacenter/src/uploads/2019/01/hero-21-1920x1080.jpg");
+  transition: 0.5s;
+  background-position: center;
+  background-size: 100%, 100%;
+  height: 125px;
+  margin-bottom: 15px;
+  border-radius: 15px 15px 0 0;
+}
+/* sets the height and width of the HTML/CSS logo, and changes the image to a circle */
+.card-image1 img {
+  height: 130px;
+  width: 130px;
+  border-radius: 50%;
+
+}
+/* this sets the flex properties of the smaller cards  */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 25px;
+  max-width: 1500px;
+  margin: 0 auto
+}
+/* sets the styling of the smaller cards */
+.card {
+  background: #098191;
+  width: 600px;
+  height: 200px;
+  margin: 20px;
+  border-radius: 15px 15px;
+}
+/* sets the styling of all the background images of the smaller cards */
+.card-image {
+  filter: blur(3px);
+  transition: 0.5s;
+  background-position: center;
+  background-size: 100%, 100%;
+  height: 125px;
+  margin-bottom: 15px;
+  border-radius: 15px 15px 0 0;
+}
+/* background image for card 2 */
+#card-image2 {
+  background-image: url("https://www.itprotoday.com/sites/itprotoday.com/files/styles/article_featured_standard/public/JavaScript-code.jpg?itok=yB8Igyye");
+}
+/* background image for card 3 */
+#card-image3 {
+  background-image: url("https://images.tmcnet.com/tmc/misc/articles/image/2022-feb/1278619887-AdobeStock_322315214_cloud_API_SUPERSIZE.jpg");
+
+}
+/* background image for card 4 */
+#card-image4 {
+  background-image: url("https://www.cuinsight.com/wp-content/uploads/2021/04/bigstock-Future-Technology-Innovation-403377170.jpg");
+
+}
+/* background image for card 5 */
+#card-image5 {
+  background-image: url("https://cdn.pixabay.com/photo/2019/11/14/13/01/abstract-4626114_960_720.jpg");
+
+}
+/* image styling for card images */
+.card-image img {
+  height: 125px;
+  width: 125px;
+  border-radius: 50%;
+}
+
+/* sets styling for when hovered over the card images */
+.card-image:hover {
+  filter: blur(0px);
+
+}
+/* sets the margin and relationship of the buttons in the cards */
+.card-button {
+  float: right;
+  margin-right: 25px;
+
+}
+/* sets the styling of the container that holds the contact information */
 address {
   background-color: #098191;
+  width: 100%;
+  margin: 0 auto;
+  content: '';
+  display: table;
+  clear: both;
 }
+/* this styles "Contact Me", and gives it relationship within the nav section  */
+h5 {
+  float: left;
+  padding: 10px 0;
+  margin-left: 70px;
+  margin-top: 25px;
+  font-family: monospace;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 300%;
 
+
+}
+/* This pushes the contact links to the center of the page, and keeps them organized as screen becomes smaller */
 .contactlinks {
   float: center;
   padding-bottom: 35px;
-  
-  
+  flex-wrap: wrap;
 }
 
-address ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
- 
-}
-
+/* This orders the links inline-block, and spaces them out evenly while staying inline with the h5 tag  */
 address li {
   display: inline-block;
   margin-left: 110px;
   margin-right: 90px;
   padding-top: 40px;
   position: relative;
-}
 
+}
+/* Styling for the contact links when not hover */
 address a {
   color: #444;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 14px;
 }
-
+/* styling of the individual contact items, when hovered over */
 address a:hover {
   color: #000;
   font-weight: bold;
 }
-
+/* sets a bar above the contact links, should not be seen until hovered over because the top and width are set to 0 */
 address a::before {
   content: '';
-  display:block;
+  display: block;
   height: 5px;
   width: 100px;
   background-color: #444;
-  position:absolute;
+  position: absolute;
   top: 0;
   width: 0;
+  
+}
+/* This controlls the speed and how far the hover effect spans across the links */
+address a:hover::before {
+  width: 100%;
   transition: all ease-in-out 300ms;
 }
 
-address a:hover::before {
-  width: 100%
+@media screen and (max-width: 1024px) {
+
+  .abouttext {
+    font-size: 11px;
+  }
 }
 
- @media screen and (max-width: 1024px){
-  
-.abouttext {font-size: 11px; }
-} 
 
+@media screen and (max-width: 768px) {
+  #targetimage {
+    display: none
+  }
 
-@media screen and (max-width: 768px){
-#targetimage {display:none}
-.abouttext {line-height:1; font-size: 10px;  }
+  .abouttext {
+    line-height: 1;
+    font-size: 10px;
+  }
 }
 
-@media screen and (max-width: 480px){ 
-nav li { margin-right: 20px;}
-.hero-image {display:none}
+@media screen and (max-width: 480px) {
+  nav li {
+    margin-right: 20px;
+  }
+
+  .hero-image {
+    display: none
+  }
 }
