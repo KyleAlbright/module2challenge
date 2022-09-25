@@ -366,6 +366,7 @@ address a:hover::before {
 
 
 @media screen and (max-width: 768px) {
+  
   #targetimage {
     display: none
   }
@@ -377,10 +378,10 @@ address a:hover::before {
 }
 
 @media screen and (max-width: 480px) {
+
   nav li {
     margin-right: 20px;
   }
-
   .hero-image {
     display: none
   }
