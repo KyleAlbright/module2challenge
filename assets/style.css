@@ -1,3 +1,11 @@
+/* consistant stylings */
+:root {
+  --accent: #098191;
+  --mainfont: #eee;
+  --navlink-color: #444;
+  
+}
+
 /* general styling of font, and background color (background color was styled to hide the background image on line 149 */
 body {
   margin: 10px;
@@ -14,7 +22,7 @@ html {
 
 /* This is the container for the nav bar */
 header {
-  background: #098191;
+  background: var(--accent);
   width: 100%;
   margin: 0 auto;
   content: '';
@@ -40,6 +48,7 @@ h1 {
   float: right;
   list-style: none; 
   flex-wrap: wrap; 
+  
 
 }
 /* This orders the links inline-block, and spaces them out evenly while staying inline with the h1 tag  */
@@ -54,7 +63,7 @@ nav li {
 }
 /* Styling for the nav links when not hover */
 nav a {
-  color: #444;
+  color: var(--navlink-color);
   text-decoration: none;
   text-transform: uppercase;
   font-size: 14px;
@@ -70,7 +79,7 @@ nav a::before {
   display: block;
   height: 5px;
   width: 100px;
-  background-color: #444;
+  background-color: var(--navlink-color);
   position: absolute;
   top: 0;
   width: 0;
@@ -100,7 +109,7 @@ nav a:hover::before {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #eee
+  color: var(--mainfont);
 }
 /* "My Name is Kyle" styling */
 .myname {
@@ -121,8 +130,8 @@ nav a:hover::before {
 }
 /* sets the styling of the button */
 button {
-  color: #ffffff;
-  background: #098191;
+  color: var(--mainfont);
+  background: var(--accent);
   border-radius: 50px;
   display: inline-block;
   border: none;
@@ -135,14 +144,14 @@ button {
 /* sets the styling of the words inside the button when links are attached to them. This was done to take away the default styling */
 button a {
   text-decoration: none;
-  color: #ffffff;
+  color:var(--mainfont);
 
 }
 /* sets the styling of how the button and cursor reacts when hovered over */
 button:hover {
   background: #222;
   cursor: grab;
-  color: #fff;
+  color: var(--mainfont);
   transition: ease .5s;
 }
 /* This is the background image behind the "About me section" */
@@ -159,7 +168,7 @@ h3 {
   margin-bottom: 20px;
   font-family: monospace;
   font-size: 200%;
-  color: white;
+  color: var(--mainfont);
 }
 
 /* cutout image, shape-outside was done to wrap the text around the image */
@@ -175,7 +184,7 @@ h3 {
 
 /* styling of the about me section */
 #abouttext {
-  color: white;
+  color: var(--mainfont);
   display: inline;
   line-height: 2.5;
   min-height: 250px;
@@ -189,7 +198,7 @@ h4 {
   margin: 27px 0 20px 20px;
   font-family: monospace;
   font-size: 150%;
-  color: white;
+  color: var(--mainfont);
 
 }
 
@@ -236,7 +245,7 @@ h4 {
 }
 /* sets the styling of the smaller cards */
 .card {
-  background: #098191;
+  background: var(--accent);
   width: 600px;
   height: 200px;
   margin: 20px;
@@ -291,7 +300,7 @@ h4 {
 }
 /* sets the styling of the container that holds the contact information */
 address {
-  background-color: #098191;
+  background-color: var(--accent);
   width: 100%;
   margin: 0 auto;
   content: '';
@@ -329,7 +338,7 @@ address li {
 }
 /* Styling for the contact links when not hover */
 address a {
-  color: #444;
+  color: var(--navlink-color);
   text-decoration: none;
   text-transform: uppercase;
   font-size: 14px;
@@ -379,15 +388,15 @@ address a:hover::before {
 
 @media screen and (max-width: 480px) {
 
-  .abouttext p { 
-   overflow: scroll
-  }
+  
   h4{
     font-size: 85%;
   }
 
   nav li {
     margin-right: 20px;
+    font-size: 85%;
+    align-items: column;
   }
   .hero-image {
     display: none
