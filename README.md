@@ -1,53 +1,61 @@
-# Module2challenge - Kyle Albright
+# Module3challenge - Kyle Albright
 
 
 # User Story
 ```
-AS AN employer
-I WANT to view a potential employee's deployed portfolio of work samples
-SO THAT I can review samples of their work and assess whether they're a good candidate for an open position
+AS AN employee with access to sensitive data
+I WANT to randomly generate a password that meets certain criteria
+SO THAT I can create a strong password that provides greater security
+
 ```
 
 
 ## Acceptance Criteria
 
 ```
-GIVEN I need to sample a potential employee's previous work
-WHEN I load their portfolio
-THEN I am presented with the developer's name, a recent photo or avatar, and links to sections about them, their work, and how to contact them
-WHEN I click one of the links in the navigation
-THEN the UI scrolls to the corresponding section
-WHEN I click on the link to the section about their work
-THEN the UI scrolls to a section with titled images of the developer's applications
-WHEN I am presented with the developer's first application
-THEN that application's image should be larger in size than the others
-WHEN I click on the images of the applications
-THEN I am taken to that deployed application
-WHEN I resize the page or view the site on various screens and devices
-THEN I am presented with a responsive layout that adapts to my viewport
+GIVEN I need a new, secure password
+WHEN I click the button to generate a password
+THEN I am presented with a series of prompts for password criteria
+WHEN prompted for password criteria
+THEN I select which criteria to include in the password
+WHEN prompted for the length of the password
+THEN I choose a length of at least 8 characters and no more than 128 characters
+WHEN asked for character types to include in the password
+THEN I confirm whether or not to include lowercase, uppercase, numeric, and/or special characters
+WHEN I answer each prompt
+THEN my input should be validated and at least one character type should be selected
+WHEN all prompts are answered
+THEN a password is generated that matches the selected criteria
+WHEN the password is generated
+THEN the password is either displayed in an alert or written to the page
 ```
 
 ### Usage
 
-On the right side of the nav bar you will find 4 nav links. The first three will pull you to different points of the page. The last one should take you to my personal github repository. 
+    When the user clicks generate password, it will prompt them to pick a number from 8-128. If the user enters an invalid number, 
+It will display what they chose and ask them to try again. If user picks a valid number, it will display their choice and then proceed
+to the next step. 
 
-The hero image features a button that will take you to my personal linkedin. 
+The next four steps will take them through choices of characters. They can choose lowerCase, upperCase, numbers, and special characters. 
+After a choice has been made, it will notify the user what they chose. If the user did not choose any of the options, the alert window will shut down, 
+and it will prompt to click generate password again; restarting from the beginning.
 
-The button on the larger main feature card will take you to my first HTML / CSS project from module 1. The smaller feature card buttons will take you to corresponding wiki pages relating to the material. 
+If all fields have been filled out correctly, the password will be generated according to the users specifications.
 
-The contact section has links, however they are not connected to anything yet.
+
+
 
 ### Resources
 
 * w3schools.com
 * stackoverflow.com
-* css-tricks.com
-* https://olivierforget.net/css-shape-outside/ (editor for shape-outside property)
+* developer.mozilla.org/en-US/
+
 
 
 
 ###
 
-* Link to Deployed Web Page: https://kylealbright.github.io/module2challenge/
+
 
 
