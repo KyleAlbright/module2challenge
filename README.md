@@ -58,4 +58,8 @@ If all fields have been filled out correctly, the password will be generated acc
 
 
 
+![Screenshot (8)](https://user-images.githubusercontent.com/110487869/192423384-710cd1f6-2ed5-4f98-8ae8-fc812572456f.png)
 
+![Screenshot (9)](https://user-images.githubusercontent.com/110487869/192423429-39d5d270-3c51-4031-8410-769b90407f74.png)
+
+![Screenshot (10)](https://user-images.githubusercontent.com/110487869/192423438-ca33f08d-a5f8-4a67-92ab-270ae12e1715.png)
